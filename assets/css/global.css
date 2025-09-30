@@ -13,6 +13,16 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  font-size: 3rem;
+  color: #FFF;
+}
+
+h2 {
+  margin: 5vh 0 0 0;
+  font-weight: bolder;
+}
+
 a:link, a:visited {
   color: #FFF;
   text-decoration: none;
@@ -50,6 +60,7 @@ header nav a {
 
 header nav a:hover {
   background-color: #000;
+  text-decoration: underline;
 }
 
 main {
@@ -68,24 +79,86 @@ main {
   justify-content: center;
 }
 
-#hero h1 {
-  font-size: 3rem;
-  color: #FFF
-}
-
 #content {
   background: #FFF;
   padding: 5vh 5vw;
 }
 
-#content a {
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  gap: 5%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  padding: 5vh 5%;
+  gap: 5%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 15vh;
+
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+
+  font-size: 1.3rem;
+}
+
+.card:hover {
+  text-decoration: underline;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.course .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course .text {
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+.course .text a {
   color: #000;
   font-weight: bold;
   text-decoration: underline;
 }
 
-#content img {
-  width: 100%
+.course img {
+  margin-right: 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .course .container {
+    flex-direction: column;
+  }
+
+  .course .text {
+    width: 100%;
+  }
 }
 
 footer {

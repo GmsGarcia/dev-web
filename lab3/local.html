@@ -5,20 +5,44 @@
   <meta charset="UTF-8">
   <title>Lisboa • Localização</title>
   <link rel="stylesheet" href="assets/css/global.css">
+  <script src="assets/js/nav.js"></script>
+  <style>
+    .map {
+      display: flex;
+      gap: 5vw;
+    }
+
+    .map .text {
+      width: 50%
+    }
+
+    @media (max-width: 700px) {
+      .map {
+        flex-direction: column;
+      }
+
+      .map .text {
+        width: 100%
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="logo">
       <a href="index.html">
         <img src="assets/img/logo.png" alt="Lisboa">
       </a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="local.html">Localização</a>
-      <a href="multimedia.html">Multimedia</a>
-      <a href="info.html">Informações</a>
+    <nav id="nav">
+      <span class="hamburguer">&#9776;</span>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="info.html">Informações</a>
+      </div>
     </nav>
   </header>
 
@@ -28,12 +52,20 @@
     </section>
 
     <section id="content">
-      <h1>Localização</h1>
-      <p>Lisboa é a capital de Portugal, situada na costa. Do imponente Castelo de São Jorge, a vista abrange as
-        construções em tons pastel da cidade antiga, o estuário do Tejo e a Ponte 25 de Abril.</p>
-      <div style="width: 100%">
-        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lisboa+(Lisboa)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      <div class="map">
+        <div class="text">
+          <h1>Localização</h1>
+          <p>Lisboa é a capital de Portugal, localizada na costa ocidental do país, junto à foz do rio Tejo. A cidade é
+            conhecida pela sua luz única, pelas colinas que moldam a paisagem urbana e pelo equilíbrio entre tradição e
+            modernidade. Do imponente Castelo de São Jorge, erguido no alto de uma das colinas, a vista panorâmica
+            revela as construções em tons pastel da cidade antiga, os telhados de terracota, as ruelas estreitas de
+            Alfama e o movimento constante do estuário do Tejo. Ao longe, destaca-se a Ponte 25 de Abril, uma estrutura
+            monumental que liga Lisboa à margem sul e que se tornou um dos grandes símbolos da cidade.</p>
+        </div>
+        <div style="width: 100%">
+          <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lisboa+(Lisboa)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        </div>
       </div>
     </section>
   </main>

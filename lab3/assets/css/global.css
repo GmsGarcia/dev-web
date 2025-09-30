@@ -39,7 +39,11 @@ header .logo img {
   height: 10vh;
 }
 
-header nav {
+header nav .hamburguer {
+  display: none;
+}
+
+header nav .links {
   display: flex;
   width: fit-content;
   align-items: center;
@@ -48,15 +52,47 @@ header nav {
   gap: 0.5vw;
 }
 
-header nav a {
+header nav .links a {
   padding: 10px;
   font-size: 20px;
   color: #FFF;
 }
 
-header nav a:hover {
-  color: #FFF;
-  background-color: #000;
+header nav .links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  header nav {
+    padding: 0 20px
+  }
+
+  header nav .hamburguer {
+    display: block;
+    font-size: 2rem;
+  }
+  header nav .links {
+    display: none;
+  }
+  header nav:hover .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 0 1vw;
+
+    background-color: #fff;
+    border: 2px solid #000
+  }
+
+  header nav:hover .links a {
+    width: 100%;
+    color: #000;
+    background: none;
+  }
+
+  header nav:hover .links a:hover {
+    text-decoration: underline;
+  }
 }
 
 main {
@@ -69,6 +105,7 @@ main {
 
 main h1 {
   margin: 0;
+  text-align: center;
 }
 
 main p {
