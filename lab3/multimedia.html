@@ -8,15 +8,29 @@
   <style>
     .multimedia {
       display: flex;
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       width: 100%;
-      border-radius: 5px
+      border-radius: 5px;
+      
     }
 
+    /* ahhhhhhhhhhhhhhh */
     .multimedia img {
       width: calc(25% - 10px);
-      padding: 5px 5px;
+      height: calc(30vh - 10px);
+      margin: 25px;
+      border-radius: 2px;
+      transition: ease-in-out 100ms width, ease-in-out 100ms height, ease-in-out 100ms margin;
     }
+    .multimedia img:hover {
+      cursor: pointer;
+      width: calc(25% + 40px);
+      height: calc(30vh + 40px);
+      margin: 0;
+    }
+
   </style>
   <script src="assets/js/nav.js"></script>
 </head>
