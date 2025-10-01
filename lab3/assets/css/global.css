@@ -47,6 +47,7 @@ header .logo img {
 
 header nav .hamburguer {
   display: none;
+  color: #FFF
 }
 
 header nav .links {

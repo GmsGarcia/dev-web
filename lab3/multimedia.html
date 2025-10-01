@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lisboa • Multimédia</title>
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
@@ -13,7 +14,6 @@
       flex-wrap: wrap;
       width: 100%;
       border-radius: 5px;
-      
     }
 
     /* ahhhhhhhhhhhhhhh */
@@ -24,6 +24,7 @@
       border-radius: 2px;
       transition: ease-in-out 100ms width, ease-in-out 100ms height, ease-in-out 100ms margin;
     }
+
     .multimedia img:hover {
       cursor: pointer;
       width: calc(25% + 40px);
@@ -31,6 +32,11 @@
       margin: 0;
     }
 
+    @media (max-width: 700px) {
+      .multimedia img {
+        width: 100%;
+      }
+    }
   </style>
   <script src="assets/js/nav.js"></script>
 </head>
@@ -43,7 +49,7 @@
       </a>
     </div>
     <nav id="nav">
-      <span class="hamburguer">&#9776;</span>
+      <span id="bar" class="hamburguer">&#9776;</span>
       <div class="links">
         <a href="index.html">Home</a>
         <a href="local.html">Localização</a>
