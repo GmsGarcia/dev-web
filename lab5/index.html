@@ -31,15 +31,33 @@
     </li>
     <li>
       <p>
-        <span>Escolha uma cor em inglês:</span>
-        <input id="colorText" type="text">
-        <button onclick="colorText()">Submeter!</button>
+        <span>Escolha uma cor:</span>
+        <select id="select">
+          <option value="white" selected>White</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
       </p>
     </li>
     <li>
       <p>
         <button onclick="count()">Conta!</button>
         <span id="counter"></span>
+      </p>
+    </li>
+    <li>
+      <p>
+        <input id="name" placeholder="Insira o seu nome" type="text">
+        <input id="age" placeholder="Insira a sua idade" type="number">
+        <button onclick="label()">Submit!</button>
+        <span id="label"></span>
+      </p>
+    </li>
+    <li>
+      <p>
+        <span>Automatic Counter</span>
+        <span id="auto"></span>
       </p>
     </li>
   </ol>
