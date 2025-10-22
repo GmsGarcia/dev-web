@@ -1,37 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loja DIW</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link href="style.css" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
 
-<body>
-  <header>
-    <h1>Loja</h1>
-    <nav>
-      <ul>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#cesto">Cesto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="produtos">
+  <body>
+    <header>
+      <a class="logo" href="index.html">Loja DIW</a>
+      <nav>
+        <ul class="links">
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#cesto">Cesto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    </section>
+    <main>
+      <h1>Lista de produtos:</h1>
+      <section id="produtos"></section>
+      <h1 id="cesto-label">Cesto:</h1>
+      <section id="cesto"></section>
+      <h1 id="price" style="margin-bottom: 20px"></h1>
+    </main>
 
-    <section id="cesto">
+    <footer>
+      <p>DIW 2025</p>
+    </footer>
 
-    </section>
-  </main>
-  <footer>
-
-  </footer>
-  <script src="produtos.js"></script>
-  <script src="main.js"></script>
-</body>
-
+    <script src="assets/js/produtos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
 </html>
