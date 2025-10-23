@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loja DIW</title>
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.html">Loja DIW</a>
+      <nav>
+        <ul class="links">
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#cesto">Cesto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Lista de produtos:</h1>
+      <section id="filters">
+        <span>
+          Categoria:
+          <select id="filterBy">
+            <option value="all">Todos</option>
+          </select>
+        </span>
+
+        <span>
+          Ordenar por:
+          <select id="orderBy">
+            <option value="bestRate" selected>Melhor avaliado</option>
+            <option value="priceMax">Preço mais alto</option>
+            <option value="priceMin">Preço mais baixo</option>
+          </select>
+        </span>
+
+        <span>
+          Pesquisar:
+          <input id="searchBy" type="text" value="" />
+        </span>
+      </section>
+
+      <section id="produtos"></section>
+      <h1 id="cesto-label">Cesto:</h1>
+      <section id="cesto"></section>
+      <h2 id="price" style="margin-bottom: 20px"></h2>
+      <section id="checkout">
+        <span
+          >És estudante do DEISI? <input type="checkbox" id="deisiStudent"
+        /></span>
+        <span>Cupão de desconto: <input type="text" id="coupon" /></span>
+        <button id="purchase">Comprar</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2025</p>
+    </footer>
+
+    <script src="assets/js/produtos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

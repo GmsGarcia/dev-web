@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  user-drag: none;
+  /* disables image selection - kinda buggy ngl */
+  user-select: none;
+  /* disables text selection */
+  -webkit-user-drag: none;
+  /* webkit */
+  -khtml-user-drag: none;
+  /* khtml */
+  -moz-user-drag: none;
+  /* firefox */
+  -o-user-drag: none;
+  /* opera */
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  background-color: #0c0c0c;
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 8vh;
+  padding: 0 2vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav .links {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 2vw;
+    gap: 0.5vw;
+    list-style: none;
+
+    a {
+      padding: 10px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: space-evenly;
+  /*align-items: center;*/
+
+  h1,
+  h2 {
+    margin: 0;
+    text-align: center;
+    color: white;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #filters {
+    width: 80vw;
+    margin: 0 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    color: white;
+  }
+
+  #produtos,
+  #cesto {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5vh;
+    width: 80vw;
+    padding: 5vh 0;
+    margin: 0 10vw;
+    /*background-color: #c40000;*/
+  }
+
+  #checkout {
+    width: 80vw;
+    margin: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 1vh;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    height: 600px;
+    padding: 10px;
+
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+
+    .title {
+      margin: 5px;
+    }
+
+    img {
+      height: 50%;
+    }
+
+    .price {
+      margin: 0;
+    }
+
+    .description {
+      margin: 0;
+      font-size: 1rem;
+      padding: 10px;
+      background: #ebebeb;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      background: black;
+      border: 3px solid #00000000;
+      border-radius: 5px;
+      font-family: "Poppins";
+      color: white;
+
+      &:hover {
+        background: white;
+        color: black;
+        border: 3px solid black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
