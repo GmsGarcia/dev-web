@@ -3,6 +3,7 @@ import { Product } from "./Product.js";
 var productsContainer;
 var cartContainer;
 var checkoutContainer;
+var postContainer;
 
 var priceLabel;
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
   productsContainer = document.getElementById("produtos");
   cartContainer = document.getElementById("cesto");
   checkoutContainer = document.getElementById("checkout");
+  postContainer = document.getElementById("post");
 
   priceLabel = document.getElementById("price");
 
@@ -173,4 +175,38 @@ function setupFilters() {
   });
 }
 
-function purchase() { }
+function purchaseProducts() {
+  postContainer.innerHTML = ""
+
+  var body = {
+    products: [],
+    student: deisiStudentInput.checked,
+    coupon: couponInput.value,
+    name: ""
+  }
+
+  const items = JSON.parse(localStorage.getItem("produtos-selecionados")) || [];
+
+  items.forEach(item => {
+    body.products.push(item.id);
+  }); 
+
+  fetch(base + "/buy", {
+    method: "POST",
+    body: JSON.stringify(body)
+  })
+    .then((res) => res.json())
+    .then((res) => {
+
+      var h3 = document.createElement("h3");
+      var p = document.createElement("p");
+
+  console.log(res);
+      h3.textContent = "Valor final a pagar (com eventuais descontos): " + res["totalCost"]
+      p.textContent = "Referência de pagamento: " + res["reference"];
+
+      postContainer.appendChild(h3)
+      postContainer.appendChild(p)
+
+      localStorage.setItem("produtos-selecionados", JSON.stringify([]));
+    });}
